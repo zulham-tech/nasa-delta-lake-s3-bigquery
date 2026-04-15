@@ -1,17 +1,17 @@
-﻿# NASA Space Data Pipeline | Kafka Â· PySpark Â· Delta Lake Â· S3
+# NASA Space Data Pipeline | Delta Lake, S3, BigQuery
 
-> **Type:** Batch | **Stack:** NASA API â†’ Kafka â†’ PySpark â†’ Delta Lake (S3) â†’ BigQuery â†’ Airflow
+**Stack:** NASA API -> Kafka -> PySpark -> Delta Lake on S3 -> BigQuery -> Airflow
 
 ## Key Metrics
-- **ACID MERGE upsert:** zero duplicates on daily reruns
-- **Time-travel:** VERSION AS OF 0 for historical audits
-- **ZORDER** on date + event_id for faster analytical queries
-- **VACUUM** auto-cleanup: old versions purged after 7 days
+- ACID MERGE upsert: zero duplicates on daily reruns
+- Time-travel: VERSION AS OF 0 for historical audits
+- ZORDER on date + event_id for faster analytical queries
+- VACUUM auto-cleanup: old versions purged after 7 days
 
 ## Delta Lake Features
 | Feature | Purpose |
 |---|---|
-| MERGE upsert | No duplicates on daily reruns |
+| MERGE upsert | No duplicates on reruns |
 | Time-travel | Historical audits |
 | ZORDER | Faster queries |
 | VACUUM | Auto-cleanup old versions |
@@ -22,7 +22,7 @@
 - NASA DONKI (space weather events)
 
 ## Tech Stack
-Python Â· Apache Kafka Â· PySpark Â· Delta Lake Â· Amazon S3 Â· Google BigQuery Â· Airflow Â· Docker
+Python, Apache Kafka, PySpark, Delta Lake, Amazon S3, Google BigQuery, Airflow, Docker
 
 ## Author
-**Ahmad Zulham Hamdan** | [LinkedIn](https://linkedin.com/in/ahmad-zulham-hamdan-665170279) | [GitHub](https://github.com/zulham-tech)
+Ahmad Zulham Hamdan | https://linkedin.com/in/ahmad-zulham-hamdan-665170279
